@@ -1,0 +1,142 @@
+/* --- MENU PRINCIPAL --- */
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background-color: #020116;
+  border-radius: 15px; /* bordas arredondadas da barra */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 100;
+}
+
+/* Itens do menu */
+.menu li {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  position: relative; /* necessário para posicionar o submenu */
+}
+
+/* Links como “botões arredondados” */
+.menu li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 8px; /* arredondar cada item */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover interativo */
+.menu li a:hover {
+  background-color: #0a84ff;
+  transform: translateY(-2px); /* leve elevação ao passar o mouse */
+}
+
+/* Link ativo */
+.menu li a.active {
+  background-color: #0a84ff;
+}
+
+/* --- SUBMENU --- */
+
+.menu li .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f5fafa;
+  border-radius: 10px;
+  padding: 20px 30px;
+  min-width: 400px; /* menor largura já que tem só uma coluna */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  z-index: 200;
+  color: #0d0757;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+.menu li:hover .submenu {
+  display: block; /* ou flex, pode ser bloco só pra 1 coluna */
+}
+
+.submenu-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.submenu-column h4 {
+  color: #180757;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.submenu-column p {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #5f7f7f;
+}
+
+.menu li.has-submenu > a::after {
+  content: "\02C5";
+  font-size: 14px;
+  margin-left: 6px;
+  vertical-align: middle;
+  color: white;
+  display: inline-block; /* necessário para aplicar transform */
+  transform: scaleX(1.5); /* alarga horizontalmente */
+  transition: transform 0.2s ease;
+}
+
+/* Animação opcional no hover */
+.menu li.has-submenu:hover > a::after {
+  transform: scaleX(1.5) rotate(180deg);
+}
+
+
+/* --- BUSCA E PERFIL --- */
+
+/* Busca e perfil à direita */
+.search-item, .profile-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Força o ícone ou a busca a irem para a direita do menu */
+.profile-item {
+  margin-left: auto;
+  align-self: center;
+}
+
+/* Campo de busca */
+.search-item input {
+  padding: 5px 8px;
+  border-radius: 6px 0 0 6px;
+  border: none;
+  outline: none;
+  position: relative;
+  z-index: 100;
+}
+
+.search-item button {
+  padding: 5px 10px;
+  border-radius: 0 6px 6px 0;
+  border: none;
+  background-color: #0a84ff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-item button:hover {
+  background-color: #0a6adf;
+}
+
+

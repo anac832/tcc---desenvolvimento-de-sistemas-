@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatNexus </title>
+    <link rel ="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="simulacao.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="ajuste.css">
+    <link rel="stylesheet" href="chat.css">
+     <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="login.css">
+
+
+</head>
+<body>
+   <header>
+  
+   <header>
+   <!-- MENU -->
+  <header>
+    <nav class="menu">
+  <ul>
+    <li><a href="#inicio" class="active">Início</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+
+    <li class="has-submenu">
+      <a href="#servicos">Serviços</a>
+      <div class="submenu mega-menu">
+        <div class="submenu-column">
+          <h4>Plataforma de Atendimento</h4>
+          <p>Fidelize clientes, organize conversas e aumente a produtividade da sua equipe de atendimento.</p>
+          <h4>CRM para WhatsApp</h4>
+          <p>Enfim, um CRM perfeitamente integrado com o WhatsApp.</p>
+          <h4>ChatBot para WhatsApp</h4>
+          <p>Automatize mensagens e libere sua equipe para conversas humanas.</p>
+          <h4>Agente IA para WhatsApp</h4>
+          <p>IA com o DNA da sua empresa, disponível 24 horas por dia.</p>
+        </div>
+      </div>
+    </li>
+
+    <li class="has-submenu">
+      <a href="#contato">Contato</a>
+      <div class="submenu mega-menu">
+        <div class="submenu-column">
+          <h4>WhatsApp</h4>
+          <p>11 99999-9999</p>
+          <h4>Instagram</h4>
+          <p>@seuusuario</p>
+          <h4>Email</h4>
+          <p>contato@exemplo.com</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <!-- Botões à direita do menu -->
+  <div class="menu-buttons">
+    <a href="#login" class="btn-outline">Conecte-se</a>
+    <a href="cadastro.html" class="btn-primary" target="_blank">Cadastre-se gratuitamente</a>
+
+  </div>
+</nav>
+
+
+
+
+       
+  </header>
+
+<section class="section-hero" id="inicio">
+  <div class="hero-text">
+    <h1>Você precisa demais do que respostas automáticas</h1>
+    <h2>Você precisa de um assistente inteligente que entende o seu cliente.</h2>
+    <button class="teste">Teste gratuito</button>
+  </div>
+
+  <div class="hero-phone">
+    <div class="phone">
+      <div class="notch"></div>
+      <div class="status-bar"></div>
+      <div class="screen">
+        <span class="hora">14:06</span>
+        <div class="icones-direita">
+          <span class="wifi">&#128246;</span>
+          <span class="bateria">54%</span>
+        </div>
+        <div class="chat-container"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  
+</section>
+
+
+
+
+
+
+<!-- SEÇÃO ESCURA (fundo de cima) -->
+<section class="section-break">
+</section>
+
+<!-- SEÇÃO DOS CARDS (invadindo a próxima seção) -->
+<section class="section-cards">
+  <div class="cards">
+    <div class="card">
+      <h3>Saúde</h3>
+      <p class="card-subtitle">Clínicas, Hospitais e Farmácias</p>
+      <p>Atender todos os pacientes de forma organizada e sem erros é crucial...</p>
+      <button class="btn">Saiba Mais</button>
+    </div>
+
+    <div class="card">
+      <h3>Educação</h3>
+      <p class="card-subtitle">Cursos online, Escolas e Universidades</p>
+      <p>Lançamentos de cursos e início de matrículas geram um volume alto...</p>
+      <button class="btn">Saiba Mais</button>
+    </div>
+
+    <div class="card">
+      <h3>Escritórios</h3>
+      <p class="card-subtitle">Contabilidade, advocacia e mais</p>
+      <p>Solicitações não tratadas, impostos atrasados e prazos perdidos...</p>
+      <button class="btn">Saiba Mais</button>
+    </div>
+  </div>
+</section>
+
+<!-- POPUP MINI CHAT -->
+<!-- Botão flutuante de chat -->
+<!-- Botão de chat com SVG -->
+<!-- Botão de abrir o chat -->
+<div id="chat-button" onclick="toggleChat()">
+  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 60 60">
+    <circle cx="30" cy="30" r="30" fill="#005fa3"/>
+    <path d="M18 20 h24 a6 6 0 0 1 6 6 v12 a6 6 0 0 1 -6 6 h-16 l-6 6 v-6 h-4 a6 6 0 0 1 -6 -6 v-12 a6 6 0 0 1 6 -6 z" fill="white"/>
+  </svg>
+</div>
+
+
+<div id="mini-chat-box" style="display:none;">
+  <div class="mini-chat-header">Atendimento</div>
+  <div id="mini-chat-messages"></div>
+  <input type="text" placeholder="Digite sua mensagem..." />
+</div>
+
+ 
+
+<!-- NOVA SEÇÃO ABAIXO DOS CARDS -->
+<section class="section-light">
+  <div class="container">
+    <h2>Outra Seção Aqui</h2>
+    <p>Este é o conteúdo que fica abaixo dos cards. Pode ser texto, imagens ou até novos cards.</p>
+  </div>
+</section>
+
+  <script src="teste.js"></script>
+  
+</body>
+</html>
+
+
+
+
+

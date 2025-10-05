@@ -1,0 +1,242 @@
+/* ---------- GERAL ---------- */
+body {
+ 
+  background: none;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+body, ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-weight: bold;
+}
+
+/* ---------- CONTAINER ---------- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  
+}
+
+/* ---------- MENU ---------- */
+.menu {
+  background: #0a0a0a;
+  padding: 10px 20px;
+}
+
+.menu ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: normal;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.active {
+  background: #0077cc;
+  color: #fff;
+}
+
+/* Submenu */
+.has-submenu {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #111;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  min-width: 300px;
+  z-index: 10;
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+
+
+/* HERO AJUSTADO - mantém cores e sombras existentes */
+
+
+.section-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 100px 60px; /* padding inferior grande */
+  background: linear-gradient(to bottom, #002c46, #000000);
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.section-hero .container {
+  /* originalmente não tinha background:none, então pegava padrão branco */
+  
+  max-width: 1100px;        /* deixa espaço pros dois lados */
+  display: flex;
+  flex-direction: row;      /* lado a lado */
+  align-items: center;
+  justify-content: space-between; /* texto à esquerda e celular à direita */
+  gap: 40px;
+  text-align: left;
+   margin-right: 40px;
+}
+
+
+
+
+
+
+.hero-text {
+  max-width: 600px;
+  text-align: left; /* força alinhamento à esquerda */
+  display: flex;
+  flex-direction: column; /* h1, h2 e botão em coluna */
+  gap: 20px; /* espaçamento entre h1, h2 e botão */
+}
+
+.hero-text h1 {
+  margin: 0;
+  font-size: 48px; /* mantém tamanho destacado */
+  line-height: 1.2;
+  text-shadow: 2px 2px 7px rgba(116, 150, 189, 0.822); /* sombra original */
+}
+
+.hero-text h2 {
+  margin: 0;
+  font-size: 24px; /* menor que h1 */
+  line-height: 1.4;
+  font-weight: normal;
+  text-align: left;
+  text-shadow: none; /* mantém como estava */
+}
+
+.hero-text button.teste {
+  align-self: flex-start; /* mantém alinhamento à esquerda */
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background: #0077cc; /* cor original */
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-text button.teste:hover {
+  background: #005fa3; /* hover original */
+}
+
+.hero-phone {
+  flex: 1;              /* ocupa lado direito */
+  display: flex;
+  justify-content: flex-end; /* empurra celular pro canto */
+}
+
+/* Botão dentro do hero (normal) */
+.teste {
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background: #0077cc;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.teste:hover {
+  background: #005fa3;
+}
+
+
+
+
+/* SEÇÃO CLARA (abaixo dos cards) */
+.section-light {
+  background-color: #f5f7fb;
+  padding: 120px 20px 80px; /* espaço extra no topo para os cards invadirem */
+  text-align: center;
+  width: 100%;
+  min-height: 400px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 0;
+}
+
+/* SEÇÃO ESCURA (rodapé/final) */
+.section-dark {
+  background-color: #0a0a0a;
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  width: 100%;
+  min-height: 400px;
+  box-sizing: border-box;
+
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+
+  margin-top: 0; /* já que o espaçamento entre seções foi zerado */
+  position: relative;
+  z-index: 1;
+}
+
+/* Espaçamento entre seções */
+section + section {
+  margin-top: 0; /* mantém as seções coladas sem espaço extra */
+}
+
+
+
+
+
+/* Botão fixo no topo à direita (se precisar) */
+.teste-fixo {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: rgb(8, 4, 27);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(99, 80, 80, 0.3);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.teste-fixo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(99, 80, 80, 0.5);
+}
+
+
+
+
+
