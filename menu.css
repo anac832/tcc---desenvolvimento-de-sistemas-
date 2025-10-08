@@ -1,4 +1,19 @@
 /* --- MENU PRINCIPAL --- */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #020116;
+  padding: 10px 30px;
+  position: relative;
+  z-index: 100;
+  overflow: visible;
+  
+}
+
+/* Barra principal arredondada */
 .menu ul {
   list-style: none;
   margin: 0;
@@ -6,34 +21,36 @@
   display: flex;
   align-items: center;
   background-color: #020116;
-  border-radius: 15px; /* bordas arredondadas da barra */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   position: relative;
-  z-index: 100;
+  z-index: 200;
+  font-weight: 400;
 }
 
-/* Itens do menu */
+/* Itens principais */
 .menu li {
   display: flex;
   align-items: center;
   margin-right: 10px;
-  position: relative; /* necessário para posicionar o submenu */
+  position: relative;
+  flex-shrink: 0;
 }
 
-/* Links como “botões arredondados” */
+/* Links principais (botões arredondados) */
 .menu li a {
   display: block;
   color: white;
   text-decoration: none;
   padding: 10px 16px;
-  border-radius: 8px; /* arredondar cada item */
+  border-radius: 8px;
   transition: background-color 0.3s, transform 0.2s;
 }
 
 /* Hover interativo */
 .menu li a:hover {
   background-color: #0a84ff;
-  transform: translateY(-2px); /* leve elevação ao passar o mouse */
+  transform: translateY(-2px);
 }
 
 /* Link ativo */
@@ -41,30 +58,52 @@
   background-color: #0a84ff;
 }
 
-/* --- SUBMENU --- */
+/* Seta indicadora para submenus */
+.menu li.has-submenu > a::after {
+  content: "\02C5";
+  font-size: 14px;
+  margin-left: 6px;
+  vertical-align: middle;
+  color: white;
+  display: inline-block;
+  transform: scaleX(1.5);
+  transition: transform 0.2s ease;
+}
 
+.menu li.has-submenu:hover > a::after {
+  transform: scaleX(1.5) rotate(180deg);
+}
+
+/* --- SUBMENU --- */
 .menu li .submenu {
   display: none;
   position: absolute;
-  top: 100%;
+  top: calc(100% + 10px);
   left: 0;
   background-color: #f5fafa;
   border-radius: 10px;
   padding: 20px 30px;
-  min-width: 400px; /* menor largura já que tem só uma coluna */
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-  z-index: 200;
+  min-width: 380px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  z-index: 300;
   color: #0d0757;
   font-family: 'Arial', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5em;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
+/* Mostrar submenu ao hover */
 .menu li:hover .submenu {
-  display: block; /* ou flex, pode ser bloco só pra 1 coluna */
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
+/* Coluna interna do submenu */
 .submenu-column {
   display: flex;
   flex-direction: column;
@@ -83,46 +122,59 @@
   color: #5f7f7f;
 }
 
-.menu li.has-submenu > a::after {
-  content: "\02C5";
-  font-size: 14px;
-  margin-left: 6px;
-  vertical-align: middle;
+/* Itens clicáveis dentro do submenu */
+.submenu a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.submenu a:hover h4 {
+  color: #0a84ff;
+}
+
+/* --- BOTÕES SECUNDÁRIOS (à direita) --- */
+.menu-buttons {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.menu-buttons a {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.btn-outline {
+  border: 2px solid #007bff;
+  color: #007bff;
+  background-color: transparent;
+}
+
+.btn-primary {
+  background-color: #007bff;
   color: white;
-  display: inline-block; /* necessário para aplicar transform */
-  transform: scaleX(1.5); /* alarga horizontalmente */
-  transition: transform 0.2s ease;
 }
-
-/* Animação opcional no hover */
-.menu li.has-submenu:hover > a::after {
-  transform: scaleX(1.5) rotate(180deg);
-}
-
 
 /* --- BUSCA E PERFIL --- */
-
-/* Busca e perfil à direita */
 .search-item, .profile-item {
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-/* Força o ícone ou a busca a irem para a direita do menu */
 .profile-item {
   margin-left: auto;
   align-self: center;
 }
 
-/* Campo de busca */
 .search-item input {
   padding: 5px 8px;
   border-radius: 6px 0 0 6px;
   border: none;
   outline: none;
-  position: relative;
-  z-index: 100;
 }
 
 .search-item button {
@@ -137,4 +189,31 @@
 
 .search-item button:hover {
   background-color: #0a6adf;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .menu-buttons {
+    margin-top: 15px;
+    align-self: flex-end;
+  }
+
+  .menu li .submenu {
+    position: static;
+    min-width: 100%;
+    box-shadow: none;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
 }
