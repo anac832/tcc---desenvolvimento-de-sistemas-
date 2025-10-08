@@ -78,7 +78,8 @@
 }
 
 /* BOTÃO DO CARD */
-.card .btn { background-color: #042e55;
+.card .btn {
+  background-color: #042e55;
   color: #fff;
   border: none;
   padding: 12px 26px;
