@@ -1,9 +1,18 @@
-/* Reset básico */
+body{
+  background-color: #F0F3F5;
+  display: flex;
+  justify-content: center;  /* Centraliza horizontalmente */
+  align-items: center;      /* Centraliza verticalmente */
+  height: 100vh;            /* Altura total da janela */
+  margin: 0;          
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI',   Verdana, sans-serif;
+ 
 }
 
 /* Container do formulário */
@@ -12,11 +21,13 @@
   max-width: 400px;
   margin: 60px auto;
   padding: 40px 30px;
-  background-color: #fdfdfd;
+  background-color: white;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.212);
   text-align: center;
 }
+
+
 
 /* Título e subtítulo */
 .form-container h2 {
@@ -56,7 +67,7 @@
   border-color: #2378f7; /* vermelho similar ao botão */
   outline: none;
   box-shadow: 0 0 5px rgba(140, 184, 241, 0.795);
-  
+ 
 }
 
 /* Botão */
@@ -84,3 +95,4 @@
     padding: 30px 20px;
   }
 }
+

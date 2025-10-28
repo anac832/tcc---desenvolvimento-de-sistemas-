@@ -116,9 +116,13 @@ body, ul {
 
 .hero-text h1 {
   margin: 0;
-  font-size: 48px; /* mantém tamanho destacado */
+  font-size: 50px; /* mantém tamanho destacado */
   line-height: 1.2;
-  text-shadow: 2px 2px 7px rgba(116, 150, 189, 0.822); /* sombra original */
+  font-family: "Rowdies", sans-serif;
+  font-weight: 300;
+  /* Sombra existente */
+  text-shadow: 2px 2px 7px rgba(116, 150, 189, 0.822);
+
 }
 
 .hero-text h2 {
@@ -128,6 +132,8 @@ body, ul {
   font-weight: normal;
   text-align: left;
   text-shadow: none; /* mantém como estava */
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
 }
 
 .hero-text button.teste {
@@ -177,7 +183,7 @@ body, ul {
 
 /* SEÇÃO CLARA (abaixo dos cards) */
 .section-light {
-  background-color: #f5f7fb;
+  background-color: #0c5bfa;
   padding: 120px 20px 80px; /* espaço extra no topo para os cards invadirem */
   text-align: center;
   width: 100%;
@@ -185,7 +191,9 @@ body, ul {
   box-sizing: border-box;
   position: relative;
   z-index: 0;
+ 
 }
+
 
 /* SEÇÃO ESCURA (rodapé/final) */
 .section-dark {
@@ -205,10 +213,8 @@ body, ul {
   z-index: 1;
 }
 
-/* Espaçamento entre seções */
-section + section {
-  margin-top: 0; /* mantém as seções coladas sem espaço extra */
-}
+
+
 
 
 
