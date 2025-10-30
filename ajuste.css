@@ -40,7 +40,7 @@
   font-weight: 600;
 }
 
-/* QUEBRA DE SEÇAO DEPOIS DOS CARDS  */
+
 /* NOVA SEÇÃO COM FUNDO BRANCO */
 .section-divider {
   background-color: #ffffff; /* fundo branco */
@@ -136,9 +136,23 @@
   font-weight: 600;
 }
 
+
 /* REMOVE o botão Saiba Mais */
 .card .btn {
   display: none;
+}
+
+/* BOTÃO DO CARD */
+.card .btn {
+  background-color: #042e55;
+  color: #fff;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
 }
 
 /* CORES DIFERENTES EM TOM PASTEL (azulados) */
