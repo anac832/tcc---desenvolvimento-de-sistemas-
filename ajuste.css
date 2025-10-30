@@ -1,79 +1,14 @@
-/* SEÇÃO ESCURA COM FUNDO */
-.section-break {
-  background-image: url("oleg-illarionov-iTG1FfVIfPM-unsplash.jpg");
-  background-size: cover;
-  background-position: center;
-  padding: 120px 20px;  /* Aumenta o espaço interno */
-  min-height: 800px;    /* Garante altura suficiente para os cards caberem */
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* Deixa os cards começarem mais acima */
-  text-align: center;
-  position: relative;
-   
-}
-.section-content {
- 
-  padding: 60px 30px;
-  border-radius: 20px;
-  max-width: 1300px;
-  width: 100%;
-
-}
-
-/* TÍTULOS E SUBTÍTULO */
-.section-break h1 {
-  color: rgb(250, 247, 247);
-  font-size: 45px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-  margin-bottom: 20px;
-  font-family: "Rowdies", sans-serif;
-  font-weight: 300;
-  
-}
-
-.section-break .subtitulo {
-  color: #fffcfc;
-  font-size: 16px;
-  margin-bottom: 50px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-}
-
-
-/* NOVA SEÇÃO COM FUNDO BRANCO */
-.section-divider {
-  background-color: #ffffff; /* fundo branco */
-  padding: 120px 20px;       /* mesmo padding da seção escura para consistência */
-  text-align: center;
-}
-
-.section-divider .container {
-  max-width: 1300px;         /* mesma largura da section-content da seção escura */
-  margin: 0 auto;
-  padding: 60px 30px;        /* mesmo padding interno */
-  border-radius: 20px;       /* mantém estilo arredondado se quiser */
-}
-
-.section-divider h5 {
-  font-size: 32px;            /* similar ao h1 da seção escura */
-  font-weight: 600;
-  color: #333333;             /* texto escuro para contraste */
-  font-family: "Rowdies", sans-serif; /* mantém a tipografia consistente */
-  margin: 0;
-}
-
-
-
-
 /* CONTAINER DOS CARDS */
 .cards {
   display: flex;
-  justify-content: center;
+  flex-direction: row;   /* deixa os cards lado a lado */
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: stretch;   /* garante alturas equilibradas */
   gap: 40px;
-  flex-wrap: wrap;
+  flex-wrap: wrap;        /* quebra linha se faltar espaço */
   margin-bottom: 200px;
 }
+
 
 /* CARD BASE */
 .card {
@@ -181,3 +116,6 @@
     margin-top: 20px;
   }
 }
+
+
+
