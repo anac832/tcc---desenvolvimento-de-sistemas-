@@ -1,13 +1,15 @@
 
-
 /* CONTAINER DOS CARDS */
 .cards {
   display: flex;
-  justify-content: center;
+  flex-direction: row;   /* deixa os cards lado a lado */
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: stretch;   /* garante alturas equilibradas */
   gap: 40px;
-  flex-wrap: wrap;
+  flex-wrap: wrap;        /* quebra linha se faltar espaço */
   margin-bottom: 200px;
 }
+
 
 /* CARD BASE */
 .card {
@@ -115,3 +117,6 @@
     margin-top: 20px;
   }
 }
+
+
+
