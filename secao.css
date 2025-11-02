@@ -1,6 +1,6 @@
 /* SEÇÃO ESCURA COM FUNDO */
 .section-break {
-  background-image: url("oleg-illarionov-iTG1FfVIfPM-unsplash.jpg");
+  background-image: url("pinblue.png");
   background-size: cover;
   background-position: center;
  padding: 10px;  
@@ -42,7 +42,7 @@
 /* NOVA SEÇÃO */
 /* === SEÇÃO DE PLANOS === */
 
-h4{
+h4.pricing-title {
 
  font-family:  "Poppins", sans-serif;
  text-align: center;

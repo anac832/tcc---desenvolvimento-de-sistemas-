@@ -6,12 +6,13 @@
   width: 100%;
   box-sizing: border-box;
   background-color: #020116;
-  padding: 10px 30px;
-  position: relative;
-  z-index: 100;
-  overflow: visible;
-  
+  padding: 15px 35px;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  z-index: 1000; 
 }
+
 
 /* Barra principal arredondada */
 .menu ul {
@@ -42,6 +43,7 @@
   display: block;
   color: white;
   text-decoration: none;
+  font-family: "Poppins", sans-serif ;
   padding: 10px 16px;
   border-radius: 8px;
   transition: background-color 0.3s, transform 0.2s;

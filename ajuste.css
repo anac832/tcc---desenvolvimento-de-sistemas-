@@ -94,15 +94,15 @@
 /* CORES DIFERENTES EM TOM PASTEL (azulados) */
 /* DIFERENTES TONS DE AZUL CLARO — MAIS VISÍVEIS */
 .card:nth-child(1) {
-  background: linear-gradient(180deg, #9cdaf5 85%,#2ca0f8  100%);
+  background: linear-gradient(180deg, #abe5fd 85%,#2ca0f8  100%);
 }
 
 .card:nth-child(2) {
-  background: linear-gradient(180deg, #9cdaf5 85%, #2ca0f8   100%);
+  background: linear-gradient(180deg, #abe5fd 85%, #2ca0f8   100%);
 }
 
 .card:nth-child(3) {
-  background: linear-gradient(180deg,  #9cdaf5 85%, #2ca0f8   100%);
+  background: linear-gradient(180deg,  #abe5fd 85%, #2ca0f8   100%);
 }
 
 /* RESPONSIVO */

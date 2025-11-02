@@ -55,7 +55,7 @@ input[type="password"] {
 }
 
 input:focus {
-  border-color: #ff640a;
+  border-color: #1781fa;
   box-shadow: 0 0 0 2px rgba(0, 87, 255, 0.15);
 }
 
