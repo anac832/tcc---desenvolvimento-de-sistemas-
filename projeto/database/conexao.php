@@ -3,7 +3,7 @@
 // CONEXÃO SQLITE REUTILIUZÁVEL PARA TODA A APLICAÇÃO
 
 // CAMINHO PARA O ARQUIVO DO BANCO DE DADOS (AJUSTE CONFORME SUA ESTRUTURA)
-$db_file = __DIR__ . './db.sqlite';
+$db_file = __DIR__ . '/db.sqlite';
 
 try {
     // CRIA (OU ABRE) O BANCO DE DADOS SQLITE

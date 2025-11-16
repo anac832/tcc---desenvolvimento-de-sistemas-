@@ -1,6 +1,5 @@
 /* ---------- GERAL ---------- */
 body {
- 
   background: none;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -20,7 +19,6 @@ body, ul {
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
-  
 }
 
 /* ---------- MENU ---------- */
@@ -72,92 +70,79 @@ body, ul {
   display: block;
 }
 
-
-
-/* HERO AJUSTADO - mantém cores e sombras existentes */
-
-
+/* ---------- SEÇÃO HERO ---------- */
 .section-hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  padding: 100px 60px; /* padding inferior grande */
+  padding: 100px 60px;
   background: linear-gradient(to bottom, #002c46, #000000);
   color: #fff;
   flex-wrap: wrap;
 }
 
 .section-hero .container {
-  /* originalmente não tinha background:none, então pegava padrão branco */
-  
-  max-width: 1100px;        /* deixa espaço pros dois lados */
+  max-width: 1100px;
   display: flex;
-  flex-direction: row;      /* lado a lado */
+  flex-direction: row;
   align-items: center;
-  justify-content: space-between; /* texto à esquerda e celular à direita */
+  justify-content: space-between;
   gap: 40px;
   text-align: left;
-   margin-right: 40px;
+  margin-right: 40px;
 }
-
-
-
-
-
 
 .hero-text {
   max-width: 600px;
-  text-align: left; /* força alinhamento à esquerda */
+  text-align: left;
   display: flex;
-  flex-direction: column; /* h1, h2 e botão em coluna */
-  gap: 20px; /* espaçamento entre h1, h2 e botão */
+  flex-direction: column;
+  gap: 20px;
 }
 
 .hero-text h1 {
   margin: 0;
-  font-size: 50px; /* mantém tamanho destacado */
+  font-size: 50px;
   line-height: 1.2;
   font-family: "Rowdies", sans-serif;
   font-weight: 300;
-  /* Sombra existente */
   text-shadow: 2px 2px 7px rgba(116, 150, 189, 0.822);
-
 }
 
 .hero-text h2 {
   margin: 0;
-  font-size: 24px; /* menor que h1 */
+  font-size: 24px;
   line-height: 1.4;
   font-weight: normal;
   text-align: left;
-  text-shadow: none; /* mantém como estava */
+  text-shadow: none;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
 
 .hero-text button.teste {
-  align-self: flex-start; /* mantém alinhamento à esquerda */
+  align-self: flex-start;
   margin-top: 20px;
   padding: 12px 24px;
   font-size: 18px;
   font-weight: bold;
   border: none;
   border-radius: 8px;
-  background: #0077cc; /* cor original */
+  background: #0077cc;
   color: #fff;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .hero-text button.teste:hover {
-  background: #005fa3; /* hover original */
+  background: #005fa3;
 }
 
 .hero-phone {
-  flex: 1;              /* ocupa lado direito */
+  flex: 1;
   display: flex;
-  justify-content: flex-end; /* empurra celular pro canto */
+  justify-content: flex-end;
 }
 
 /* Botão dentro do hero (normal) */
@@ -178,24 +163,74 @@ body, ul {
   background: #005fa3;
 }
 
+/* ---------- SEÇÃO ESCURA COM CARDS ---------- */
+.section-break {
+  background-image: url("../imagem/pinblue.png");
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  min-height: 600px;
+  text-align: center;
+  position: relative;
+}
 
+/* Centraliza e organiza o conteúdo interno */
+.section-content {
+  padding: 60px 30px;
+  border-radius: 20px;
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+}
 
+/* TÍTULOS E SUBTÍTULO */
+.section-break h1 {
+  color: rgb(250, 247, 247);
+  font-size: 45px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
+  font-family: "Rowdies", sans-serif;
+  font-weight: 300;
+}
 
-/* SEÇÃO CLARA (abaixo dos cards) */
+.section-break .subtitulo {
+  color: #fffcfc;
+  font-size: 16px;
+  margin-bottom: 60px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+/* Container dos cards */
+.section-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+/* ---------- SEÇÃO CLARA ---------- */
 .section-light {
   background-color: #0c5bfa;
-  padding: 120px 20px 80px; /* espaço extra no topo para os cards invadirem */
+  padding: 120px 20px 80px;
   text-align: center;
   width: 100%;
   min-height: 400px;
   box-sizing: border-box;
   position: relative;
   z-index: 0;
- 
 }
 
-
-/* SEÇÃO ESCURA (rodapé/final) */
+/* ---------- SEÇÃO ESCURA ---------- */
 .section-dark {
   background-color: #0a0a0a;
   color: #fff;
@@ -204,23 +239,14 @@ body, ul {
   width: 100%;
   min-height: 400px;
   box-sizing: border-box;
-
   border-top-left-radius: 80px;
   border-top-right-radius: 80px;
-
-  margin-top: 0; /* já que o espaçamento entre seções foi zerado */
+  margin-top: 0;
   position: relative;
   z-index: 1;
 }
 
-
-
-
-
-
-
-
-/* Botão fixo no topo à direita (se precisar) */
+/* ---------- BOTÃO FIXO ---------- */
 .teste-fixo {
   position: fixed;
   top: 20px;
@@ -241,8 +267,3 @@ body, ul {
   transform: scale(1.05);
   box-shadow: 0 6px 10px rgba(99, 80, 80, 0.5);
 }
-
-
-
-
-
