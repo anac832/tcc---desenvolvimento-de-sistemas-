@@ -137,19 +137,42 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // =================== MOSTRAR/OCULTAR SENHA ===================
-  const toggle = document.querySelector('.toggle-olho');
-  const senha = document.querySelector('#senha');
-  if (toggle && senha) {
-    let mostrando = false;
-    toggle.addEventListener('click', () => {
-      mostrando = !mostrando;
-      senha.type = mostrando ? 'text' : 'password';
-      toggle.innerHTML = mostrando
-        ? '<path fill="#555" d="M12 6a9.77 9.77 0 0 1 9.54 7 9.77 9.77 0 0 1-19.08 0A9.77 9.77 0 0 1 12 6m0 2a7.73 7.73 0 0 0-7.45 5 7.73 7.73 0 0 0 14.9 0A7.73 7.73 0 0 0 12 8m0 2a3 3 0 0 1 0 6a3 3 0 0 1 0-6z"/>'
-        : '<path fill="#555" d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zm0 12.5c-2.48 0-4.5-2.02-4.5-4.5S9.52 8 12 8s4.5 2.02 4.5 4.5S14.48 17 12 17zm0-7c-1.38 0-2.5 1.12-2.5 2.5S10.62 15 12 15s2.5-1.12 2.5-2.5S13.38 10 12 10z"/>';
-    });
-  }
+// =================== MOSTRAR/OCULTAR SENHA ===================
+const senha = document.getElementById("senha");
+const toggle = document.getElementById("toggleSenha");
+
+let mostrando = false;
+
+toggle.addEventListener("click", () => {
+  mostrando = !mostrando;
+
+  // Alterna o tipo do input
+  senha.type = mostrando ? "text" : "password";
+
+  // Alterna o ícone
+  toggle.innerHTML = mostrando
+    ? `
+      <!-- Olho RIScado profissional -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24">
+        <path fill="none" stroke="#555" stroke-width="2"
+              d="M1 12s4-7 11-7s11 7 11 7s-4 7-11 7S1 12 1 12z"/>
+        <circle cx="12" cy="12" r="3" fill="#555"/>
+        <line x1="4" y1="4" x2="20" y2="20" stroke="#555" stroke-width="2"/>
+      </svg>
+    `
+    : `
+      <!-- Olho normal profissional -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24">
+        <path fill="none" stroke="#555" stroke-width="2"
+              d="M1 12s4-7 11-7s11 7 11 7s-4 7-11 7S1 12 1 12z"/>
+        <circle cx="12" cy="12" r="3" fill="#555"/>
+      </svg>
+    `;
+});
+
+
+
+
 
   // =================== FAQ ===================
   const faqItems = document.querySelectorAll('.faq-item');

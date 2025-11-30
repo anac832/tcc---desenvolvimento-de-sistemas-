@@ -1,9 +1,11 @@
 /* ---------- GERAL ---------- */
-body {
+html,body {
   background: none;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body, ul {
@@ -74,13 +76,14 @@ body, ul {
 .section-hero {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;  /* antes era space-between */
   gap: 40px;
-  padding: 100px 60px;
+  padding: 80px 40px;
   background: linear-gradient(to bottom, #002c46, #000000);
   color: #fff;
   flex-wrap: wrap;
 }
+
 
 .section-hero .container {
   max-width: 1100px;
@@ -90,7 +93,8 @@ body, ul {
   justify-content: space-between;
   gap: 40px;
   text-align: left;
-  margin-right: 40px;
+  margin: 0 auto;   /* CENTRALIZA SEM SOBRAR BRANCO */
+  padding: 0 20px;   /* EVITA O CORTE NAS BORDAS */
 }
 
 .hero-text {

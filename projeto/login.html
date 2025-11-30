@@ -26,19 +26,27 @@
         <a href="#" class="esqueceu">Esqueceu sua senha?</a>
       </div>
 
-      <div class="input-senha">
-        <input
-          type="password"
-          id="senha"
-          name="senha"
-          placeholder="12 caracteres ou mais"
-          required
-        >
-        <!-- Ícone SVG do olho -->
-        <svg class="toggle-olho" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20">
-          <path fill="#555" d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zm0 12.5c-2.48 0-4.5-2.02-4.5-4.5S9.52 8 12 8s4.5 2.02 4.5 4.5S14.48 17 12 17zm0-7c-1.38 0-2.5 1.12-2.5 2.5S10.62 15 12 15s2.5-1.12 2.5-2.5S13.38 10 12 10z"/>
-        </svg>
-      </div>
+   <div class="campo-senha">
+  <input
+    type="password"
+    id="senha"
+    name="senha"
+    placeholder="12 caracteres ou mais"
+    required
+  >
+
+  <span id="toggleSenha" class="icone-senha">
+    <!-- Ícone inicial: olho aberto (senha oculta) -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path fill="#555" d="M1.05 12.03c2.27-4.06 6.13-6.53 10.98-6.53s8.71 2.47 10.98 6.53a1.02 1.02 0 0 1 0 .94c-2.27 4.06-6.13 6.53-10.98 6.53s-8.71-2.47-10.98-6.53a1.02 1.02 0 0 1 0-.94zm10.98 4.47a4.47 4.47 0 1 0 0-8.94a4.47 4.47 0 0 0 0 8.94z"/>
+    </svg>
+  </span>
+</div>
+
+
+
+
+
 
       <button type="submit">Conecte-se</button>
      <div class="divider">
